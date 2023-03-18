@@ -1,0 +1,53 @@
+--Para iniciar cualquier proyecto
+
+git init
+
+git add . // adiere todos los archvos a staging
+
+git rm nombre_del_archico//elimina los archivos de staging
+
+git add nombre_de_archivo  //adiere solo el archivo especifico
+
+git commit - m "version1" //los cambios se guardan en el repositorio master por defaul
+
+git commit -am "version2"// realiza la adicion de archivos y el commit en un solo comando
+
+git reset codigodelcomit --hard // volvemos a la version del commit copiado De mucho cuidado por que se pierden los 			cambios que se hallan realizado
+
+git checkout codigodelcommit nombre_del_archivo // volvemos a la version del commit, si realizamos un commit desde 		este estado perdemos los cambios podemor checkear lo que queremos visializar y volvemos al estado actua 		con el comando siguiente.
+
+git checkout master nombre_del_archivo //volvemos a la version actual
+
+git branch nombre_de_la_rama //crea la rama pero no se cambia a ella, y si ya hay ramas creadas , enlista el nombre 		de las ramas
+
+git checkout nombre_de_la_rama //Se cambia para la rama
+
+git remote add origin https://github.com/edwimeca/hyperblog.git// le decimos a Git que vamos a enviar nuestro 			repositorioo a una estacion remota.
+git remote -v //nos muetra las direcciones para realizar push y fetch a la estacion remota
+
+git push origin master // realizamos el push desde master en nuestro pc a la estacion remotaa origin
+
+
+
+add
+
+--
+git log nombre_del_archivo // trae hitorial de git commits
+git log --stat //trae el historial con mucho mas detalle
+git diff codigodelcomit codigodelcomit //trae los cambio que se realizaron entre los commits que se estan comparando.		
+
+--Para configurar Git en Pc la primera vez
+git config --global user.name "Edwin Mejia"
+git config --global user.email "edwimeca@gmail.com"
+git config -l //para ver la configuración actual de git
+
+--Cuando se abre vin
+esc i //para insertar texto (lo que este preguntando vit) finalizo con enter
+scp shitf zz  //Guarda  o  fuerza el envio del commit para el caso
+
+--creando llaves
+ssh-keygen -t rsa -b 4096 -C "edwimeca@gmail.com" // 4096 nivel de seguridad.. el ail es al cual va a estar vinculada la  		llave
+eval $(ssh-agent -s) // para validar que el keygenn este encendido
+
+$ ssh-add /c/Users/edwimeca/.ssh/id_rsa  // para aderir la llave al entorno
+ 
